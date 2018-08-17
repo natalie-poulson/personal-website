@@ -1,0 +1,236 @@
+@import 'reset copy';
+
+body {
+    font-family: Helvetica, sans-serif;
+    background-color: black;
+    opacity:.79;
+    // background-color:white;
+    // opacity:.9;
+}
+
+// Landing Page
+header {
+    background-image: url('images/whiterose.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center;
+    height:100vh;
+    width:100vw;
+}
+nav {
+    background-color: black;
+    opacity: .65;
+    width:100vw;
+    height: 8vh;
+    text-align: center;
+    ul {
+        list-style:none;
+        padding: 1.2em 0;
+        vertical-align: middle;
+    }
+    li {
+        display: inline-block;
+        margin: 0 2em;
+    } 
+    a {
+        display: block;
+        text-decoration: none;
+        color: white;
+        opacity: .7;
+        font-size: 1.2em;
+        text-transform: lowercase;
+    }
+}
+.name {
+    opacity: .7;
+    color:white;
+    margin: 8em 0 0 1em;
+    // text-align: center;
+    // margin: 13em 0 0 0;
+    // color:lightblue;
+    h1 {
+        text-transform:uppercase;
+        font-weight: 800;
+        font-size:5em;
+        // font-size: 6em;
+    }
+    h2 {
+        font-size: 2em;
+        text-transform:lowercase;
+    }
+}
+// About Page
+#about {
+    background-image: url('images/susan.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center;
+    width:100vw;
+    height:100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    // img {
+    // width:20vw;
+    // height:auto;
+    // border-radius:50%;
+    // opacity:.8;
+    // }
+    p {
+    display:flex;
+    justify-content: center;
+    text-align:center;
+    color:white;
+    text-transform: lowercase;
+    font-size: 1em;
+    line-height:1.2em;
+    margin: 0 2em;
+    font-size:2em;
+    }
+    h1 {
+        color:rgb(250, 212, 72);
+        text-transform: uppercase;
+        text-align:center;
+        font-weight: 800;
+        font-size: 4em;
+        opacity: .8;
+    }
+    .container {
+        display:flex;
+        justify-content: center;
+        margin: 0 0 4em 0;
+        p{
+            text-decoration:line-through #C1A94F;
+            opacity: .7;
+        }
+    }
+}
+// Portfolio Page
+#portfolio {
+    background-image: url('images/pinkflowers.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center;
+    width:100vw;
+    height:100vh;
+    h1 {
+        font-size: 5em;
+        text-transform: uppercase;
+        text-align:center;
+        font-weight:800;
+        color:black;
+        opacity: .7;
+    }
+}
+// Testimonials Page
+#testimonials {
+    background-image: url('images/rose.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center;
+    width:100vw;
+    height:100vh;
+    color:white;
+    text-align:center; 
+    h1 {
+        font-size: 5em;
+        text-transform: uppercase;
+        font-weight:800;
+    }
+    p {
+        margin: 1em 8em;
+    }
+}
+// Contact Page
+#contact {
+    background-image: url('images/daf.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center;
+    width:100vw;
+    height:100vh;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    h1 {
+        font-size: 5em;
+        text-transform: uppercase;
+        color:white;
+        font-weight:800;
+        opacity: .8;
+    }
+    form {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        input {
+            border: no-border;
+            height: 2.5em;
+            width: 22vw;
+            margin: 0 1em 0em 1em;
+            border-radius:.4em;
+            border:none;
+        }
+        input::placeholder {
+            color:grey;
+            font-size:1.3em;
+            opacity:.7;
+            padding: 0 0 0 1em;
+        }
+        textarea::placeholder {
+            color:grey;
+            font-size:1.3em;
+            opacity:.7;
+            padding: .3em 0 0 1em;
+        }
+        p {
+            font-size:1em;
+            text-align:center;
+            color:white;
+            font-weight:200;
+            margin: .3em 0 0 .5em;
+            text-transform:lowercase;
+        }
+    }
+    textarea {
+        width:70vw;
+        height:30vh;
+        border-radius:.4em;
+        border:none;
+    }
+    button {
+        width:70vw;
+        height:3em;
+        font-family:Helvetica;
+        opacity: .6;
+        color:grey;
+        margin: 1em 0 0em 0;
+        border-radius:.4em;
+        font-size: 1em;
+        text-transform: uppercase;
+    }
+    .top {
+        display: flex;
+        margin: 2em 0 1em 0;
+    }
+    footer {
+        height:8vh;
+        width:100vw;
+        text-align:center;
+        opacity:.65;
+        background-color:black;
+        position:fixed;
+        bottom:0;
+        .fab{
+            color:grey;
+        }
+        i {
+            display: inline-block;
+            margin:.3em;
+        }
+    }
+}
+#map {
+    height:200px;
+}
