@@ -114,6 +114,7 @@ nav {
     width:100vw;
     height:100vh;
     h1 {
+        padding: .5em 0 0 0;
         font-size: 5em;
         text-transform: uppercase;
         text-align:center;
@@ -124,15 +125,17 @@ nav {
 }
 // Testimonials Page
 #testimonials {
-    background-image: url('images/rose.jpg');
+    background-image: url('images/aspen.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position:center;
     width:100vw;
     height:100vh;
     color:white;
-    text-align:center; 
+    text-align:center;
+    opacity: .7;
     h1 {
+        padding: .5em 0 0 0;
         font-size: 5em;
         text-transform: uppercase;
         font-weight:800;
@@ -143,9 +146,9 @@ nav {
 }
 // Contact Page
 #contact {
-    background-image: url('images/daf.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-image: url('images/cactus.jpg');
+    background-size: contain;
+    //background-repeat: no-repeat;
     background-position:center;
     width:100vw;
     height:100vh;
@@ -154,6 +157,7 @@ nav {
     align-items: center;
     justify-content: center;
     h1 {
+        margin: .5em 0 0 0;
         font-size: 5em;
         text-transform: uppercase;
         color:white;
@@ -174,13 +178,11 @@ nav {
         }
         input::placeholder {
             color:grey;
-            font-size:1.3em;
             opacity:.7;
             padding: 0 0 0 1em;
         }
         textarea::placeholder {
             color:grey;
-            font-size:1.3em;
             opacity:.7;
             padding: .3em 0 0 1em;
         }
@@ -203,11 +205,12 @@ nav {
         width:70vw;
         height:3em;
         font-family:Helvetica;
-        opacity: .6;
-        color:grey;
+        color:black;
+        font-weight: 800;
+        opacity: .2;
         margin: 1em 0 0em 0;
         border-radius:.4em;
-        font-size: 1em;
+        font-size: 1.1em;
         text-transform: uppercase;
     }
     .top {

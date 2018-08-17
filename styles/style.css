@@ -156,6 +156,7 @@ nav a {
   height: 100vh;
 }
 #portfolio h1 {
+  padding: 0.5em 0 0 0;
   font-size: 5em;
   text-transform: uppercase;
   text-align: center;
@@ -165,7 +166,7 @@ nav a {
 }
 
 #testimonials {
-  background-image: url("images/rose.jpg");
+  background-image: url("images/aspen.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -173,8 +174,10 @@ nav a {
   height: 100vh;
   color: white;
   text-align: center;
+  opacity: 0.7;
 }
 #testimonials h1 {
+  padding: 0.5em 0 0 0;
   font-size: 5em;
   text-transform: uppercase;
   font-weight: 800;
@@ -184,9 +187,8 @@ nav a {
 }
 
 #contact {
-  background-image: url("images/daf.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-image: url("images/cactus.jpg");
+  background-size: contain;
   background-position: center;
   width: 100vw;
   height: 100vh;
@@ -196,6 +198,7 @@ nav a {
   justify-content: center;
 }
 #contact h1 {
+  margin: 0.5em 0 0 0;
   font-size: 5em;
   text-transform: uppercase;
   color: white;
@@ -217,13 +220,11 @@ nav a {
 }
 #contact form input::placeholder {
   color: grey;
-  font-size: 1.3em;
   opacity: 0.7;
   padding: 0 0 0 1em;
 }
 #contact form textarea::placeholder {
   color: grey;
-  font-size: 1.3em;
   opacity: 0.7;
   padding: 0.3em 0 0 1em;
 }
@@ -245,11 +246,12 @@ nav a {
   width: 70vw;
   height: 3em;
   font-family: Helvetica;
-  opacity: 0.6;
-  color: grey;
+  color: black;
+  font-weight: 800;
+  opacity: 0.2;
   margin: 1em 0 0em 0;
   border-radius: 0.4em;
-  font-size: 1em;
+  font-size: 1.1em;
   text-transform: uppercase;
 }
 #contact .top {
@@ -271,6 +273,10 @@ nav a {
 #contact footer i {
   display: inline-block;
   margin: 0.3em;
+}
+
+#map {
+  height: 200px;
 }
 
 /*# sourceMappingURL=style.css.map */
