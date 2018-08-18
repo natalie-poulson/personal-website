@@ -27,8 +27,10 @@ $('nav ul li a').click(function() {
 //Error Messages on Form
 $('button').click(function (e){
     e.preventDefault();
-    if ($('input').val().length < 1 && $('textarea').val().length <1) {
+
+    if ($('input').val().length < 1 && $('textarea').val().length < 1) {
       console.log('gotit')
+     // $('.error-message').show();
     }
 });
 

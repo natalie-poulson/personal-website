@@ -114,9 +114,9 @@ nav {
 }
 // Portfolio Page
 #portfolio {
-    background-image: url('images/pinkflowers.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-image: url('images/light-blue.png');
+    background-size: contain;
+    //background-repeat: no-repeat;
     background-position:center;
     width:100vw;
     height:100vh;
@@ -130,8 +130,8 @@ nav {
         text-transform: uppercase;
         text-align:center;
         font-weight:800;
-        color:black;
-        opacity: .7;
+        color:white;
+        opacity: .4;
     }
 }
 // Testimonials Page
@@ -230,7 +230,7 @@ nav {
         font-family:Helvetica;
         color:black;
         font-weight: 800;
-        opacity: .88;
+        opacity: .68;
         margin: 1em 0 0em 0;
         border-radius:.4em;
         font-size: 1.1em;
@@ -265,7 +265,8 @@ footer {
     height:8vh;
     width:100vw;
     text-align:center;
-    background-color:lightgrey;
+    background-color:black;
+    opacity:.7;
     .fab{
         color:grey;
     }
