@@ -40,11 +40,18 @@ nav {
         font-size: 1.2em;
         text-transform: lowercase;
     }
+    a:hover {
+        text-decoration:none;
+        border-bottom: .1em solid white;
+        color:white;
+        opacity:1;
+
+    }
 }
 .name {
     opacity: .7;
     color:white;
-    margin: 8em 0 0 1em;
+    margin: 10.4em 0 0 1em;
     // text-align: center;
     // margin: 13em 0 0 0;
     // color:lightblue;
@@ -113,6 +120,10 @@ nav {
     background-position:center;
     width:100vw;
     height:100vh;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     h1 {
         padding: .5em 0 0 0;
         font-size: 5em;
@@ -134,6 +145,11 @@ nav {
     color:white;
     text-align:center;
     opacity: .7;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
     h1 {
         padding: .5em 0 0 0;
         font-size: 5em;
@@ -170,7 +186,7 @@ nav {
         align-items: center;
         input {
             border: no-border;
-            height: 20vh;
+            height: 5vh;
             width: 24vw;
             margin: 0 0 0em 1em;
             border-radius:.4em;
@@ -186,21 +202,22 @@ nav {
             opacity:.7;
             padding: .3em 0 0 1em;
         }
-        p {
-            font-size:.9em;
-            //text-align:center;
+        
+        .error-message {
+            display: none;
+            text-align:center;
+            font-size:.8em;
             color:black;
             background-color:white;
-            opacity: .7;
+            border: .2em solid red;
+            opacity: .75;
             font-weight:400;
             margin: .2em 0 .4em 1em;
             padding:.2em .4em;;
             text-transform:lowercase;
+            border-radius:.4em;
         }
     } 
-    .message p {
-        text-align:center;
-    }
     textarea {
         width:50vw;
         height:30vh;
@@ -209,7 +226,7 @@ nav {
     }
     button {
         width:50vw;
-        height:3em;
+        height:2.5em;
         font-family:Helvetica;
         color:black;
         font-weight: 800;
@@ -226,7 +243,7 @@ nav {
         flex-direction:column; 
         justify-content: space-around;
         align-items: flex-start;
-        margin: 2em 0 1em 0;
+        margin:0;
         div {
             display:flex;
             flex-direction: column;
@@ -237,25 +254,46 @@ nav {
     .tip {
         display:flex;
         align-items: center;
-    }
-    footer {
-        height:8vh;
-        width:100vw;
-        text-align:center;
-        opacity:.65;
-        background-color:black;
-        position:fixed;
-        bottom:0;
-        .fab{
-            color:grey;
-        }
-        i {
-            display: inline-block;
-            margin:.3em;
-        }
+        margin: 2em 0 1em 0;
     }
 }
 #map {
     height:25vh;
     width: 25vw;
+}
+footer {
+    height:8vh;
+    width:100vw;
+    text-align:center;
+    background-color:lightgrey;
+    .fab{
+        color:grey;
+    }
+    .fab:hover {
+        color:white;
+    }
+    i {
+        display: inline-block;
+        margin:.5em .3em .3em .3em;
+    }
+}
+#carouselExampleIndicators {
+    width:40vw;
+    margin: 2em 0 0 0;
+}
+
+.sticky {
+    position:fixed;
+    top:0;
+    width:100vw;
+    height:8vh;
+    opacity: .7;
+    z-index:6;
+}
+.sticky-name {
+    margin:0;
+    // padding: 8em 0 0 1em;
+    position:absolute;
+    top: 14em;//297.75px;
+    left:1em;
 }

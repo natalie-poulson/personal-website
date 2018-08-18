@@ -1,5 +1,54 @@
 console.log('hi');
 
+//Sticky Nav
+  var stickyNavTop = $('nav').offset().top;
+
+  var stickyNav = function (){
+    var scrollTop = $(window).scrollTop();
+    if (scrollTop > stickyNavTop) {
+      $('nav').addClass('sticky');
+      $('.name').addClass('sticky-name');
+    } else {
+      $('nav').removeClass('sticky');
+      $('.name').addClass('sticky-name');
+    }
+  };
+  $(window).scroll(function () {
+    stickyNav();
+  });
+
+
+// Smooth Scroll
+$('nav ul li a').click(function() {
+  $('html, body').animate({scrollTop:$(this.hash).offset().top-1},700);
+  return false;
+});
+
+//Error Messages on Form
+$('button').click(function (e){
+    e.preventDefault();
+    if ($('input').val().length < 1 && $('textarea').val().length <1) {
+      console.log('gotit')
+    }
+});
+
+//quotes fade in and out//
+// var quoteArray = ["hi", "bye", "whatup"];
+
+// function rotateQuotes (quote) {
+//   for (var i = 0; i < quoteArray.length; i++) {
+//     console.log(quoteArray[i]);
+//     var words = document.getElementById('quotes');
+
+//     words.append(`${quoteArray[i]}`);
+//   }
+// };
+
+// rotateQuotes(quoteArray);
+
+
+
+// Google Maps API
 function initMap () {
     var oakland = {lat:37.804363, lng:-122.271111}
     var options = {
@@ -176,4 +225,4 @@ function initMap () {
 }
 
 initMap();
-
+// End Google Maps API
