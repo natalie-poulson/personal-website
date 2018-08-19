@@ -4,8 +4,6 @@ body {
     font-family: Helvetica, sans-serif;
     background-color: black;
     opacity:.79;
-    // background-color:white;
-    // opacity:.9;
 }
 
 // Landing Page
@@ -16,56 +14,69 @@ header {
     background-position:center;
     height:100vh;
     width:100vw;
-}
-nav {
-    background-color: black;
-    opacity: .65;
-    width:100vw;
-    height: 8vh;
-    text-align: center;
-    ul {
-        list-style:none;
-        padding: 1.2em 0;
-        vertical-align: middle;
+    .navbar {
+        display:none;
     }
-    li {
-        display: inline-block;
-        margin: 0 2em;
-    } 
-    a {
-        display: block;
-        text-decoration: none;
-        color: white;
+    .defaultnav {
+        background-color: black;
+        opacity: .65;
+        width:100vw;
+        height: 8vh;
+        text-align: center;
+        ul {
+            list-style:none;
+            padding: 1.2em 0;
+            vertical-align: middle;
+        }
+        li {
+            display: inline-block;
+            margin: 0 2em;
+        } 
+        a {
+            display: block;
+            text-decoration: none;
+            color: white;
+            opacity: .7;
+            font-size: 1.2em;
+            text-transform: lowercase;
+        }
+        a:hover {
+            text-decoration:none;
+            border-bottom: .1em solid white;
+            color:white;
+            opacity:1;
+        }
+    }   
+    .name {
         opacity: .7;
-        font-size: 1.2em;
-        text-transform: lowercase;
-    }
-    a:hover {
-        text-decoration:none;
-        border-bottom: .1em solid white;
         color:white;
-        opacity:1;
+        margin: 10.4em 0 0 1em;
+        h1 {
+            text-transform:uppercase;
+            font-weight: 800;
+            font-size:5em;
+        }
+        h2 {
+            font-size: 2em;
+            text-transform:lowercase;
+        }
+    }
+    .sticky {
+        position:fixed;
+        top:0;
+        width:100vw;
+        height:8vh;
+        opacity: .7;
+        z-index:6;
+    }
+    .sticky-name {
+        margin:0;
+        position:absolute;
+        top: 14em;//297.75px;
+        left:1em;
+    }
+}
 
-    }
-}
-.name {
-    opacity: .7;
-    color:white;
-    margin: 10.4em 0 0 1em;
-    // text-align: center;
-    // margin: 13em 0 0 0;
-    // color:lightblue;
-    h1 {
-        text-transform:uppercase;
-        font-weight: 800;
-        font-size:5em;
-        // font-size: 6em;
-    }
-    h2 {
-        font-size: 2em;
-        text-transform:lowercase;
-    }
-}
 // About Page
 #about {
     background-image: url('images/susan.jpg');
@@ -102,28 +113,28 @@ nav {
         font-size: 4em;
         opacity: .8;
     }
-    .container {
-        display:flex;
-        justify-content: center;
-        margin: 0 0 4em 0;
-        p{
-            text-decoration:line-through #C1A94F;
-            opacity: .7;
-        }
-    }
+    // .container {
+    //     display:flex;
+    //     justify-content: center;
+    //     margin: 0 0 4em 0;
+    //     p{
+    //         text-decoration:line-through #C1A94F;
+    //         opacity: .7;
+    //     }
+    // }
 }
 // Portfolio Page
 #portfolio {
-    background-image: url('images/light-blue.png');
-    background-size: contain;
-    //background-repeat: no-repeat;
+    background-image: url('images/rose.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
     background-position:center;
     width:100vw;
     height:100vh;
     display:flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     h1 {
         padding: .5em 0 0 0;
         font-size: 5em;
@@ -133,6 +144,10 @@ nav {
         color:white;
         opacity: .4;
     }
+    #carouselExampleIndicators {
+        width:40vw;
+        margin: 2em 0 0 0;
+    }    
 }
 // Testimonials Page
 #testimonials {
@@ -148,23 +163,22 @@ nav {
     display:flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-
+    justify-content: flex-start;
     h1 {
         padding: .5em 0 0 0;
         font-size: 5em;
         text-transform: uppercase;
         font-weight:800;
     }
-    p {
-        margin: 1em 8em;
+    #quotes {
+        color:black;
+        font-size: 3em;
     }
 }
 // Contact Page
 #contact {
     background-image: url('images/cactus.jpg');
     background-size: contain;
-    //background-repeat: no-repeat;
     background-position:center;
     width:100vw;
     height:100vh;
@@ -184,8 +198,31 @@ nav {
         display:flex;
         flex-direction: column;
         align-items: center;
+        .container {
+            display:flex;
+            align-items: center;
+            margin: 2em 0 1em 0;
+        }
+        #map {
+            height:25vh;
+            width: 25vw;
+        }
+        .wrapper {
+            display: flex;
+            height:25vh;
+            width:25vw;
+            flex-direction:column; 
+            justify-content: space-around;
+            align-items: flex-start;
+            margin:0;
+            div {
+                display:flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+            }
+        }
         input {
-            border: no-border;
             height: 5vh;
             width: 24vw;
             margin: 0 0 0em 1em;
@@ -197,19 +234,35 @@ nav {
             opacity:.7;
             padding: 0 0 0 1em;
         }
+        textarea {
+            width:50vw;
+            height:30vh;
+            border-radius:.4em;
+            border:none;
+        }
         textarea::placeholder {
             color:grey;
             opacity:.7;
             padding: .3em 0 0 1em;
         }
-        
+        button {
+            width:50vw;
+            height:2.5em;
+            font-family:Helvetica;
+            color:black;
+            font-weight: 800;
+            opacity: .68;
+            margin: 1em 0 0em 0;
+            border-radius:.4em;
+            font-size: 1.1em;
+            text-transform: uppercase;
+        }
         .error-message {
             display: none;
             text-align:center;
             font-size:.8em;
-            color:black;
+            color:red;
             background-color:white;
-            border: .2em solid red;
             opacity: .75;
             font-weight:400;
             margin: .2em 0 .4em 1em;
@@ -217,50 +270,12 @@ nav {
             text-transform:lowercase;
             border-radius:.4em;
         }
-    } 
-    textarea {
-        width:50vw;
-        height:30vh;
-        border-radius:.4em;
-        border:none;
-    }
-    button {
-        width:50vw;
-        height:2.5em;
-        font-family:Helvetica;
-        color:black;
-        font-weight: 800;
-        opacity: .68;
-        margin: 1em 0 0em 0;
-        border-radius:.4em;
-        font-size: 1.1em;
-        text-transform: uppercase;
-    }
-    .top {
-        display: flex;
-        height:25vh;
-        width:25vw;
-        flex-direction:column; 
-        justify-content: space-around;
-        align-items: flex-start;
-        margin:0;
-        div {
-            display:flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-start;
+        .error {
+            border: .15em solid red;
         }
-    }
-    .tip {
-        display:flex;
-        align-items: center;
-        margin: 2em 0 1em 0;
-    }
+    }  
 }
-#map {
-    height:25vh;
-    width: 25vw;
-}
+// Footer
 footer {
     height:8vh;
     width:100vw;
@@ -278,23 +293,120 @@ footer {
         margin:.5em .3em .3em .3em;
     }
 }
-#carouselExampleIndicators {
-    width:40vw;
-    margin: 2em 0 0 0;
+
+/// MEDIA QUERIES
+@media screen and (max-width:710px) {
+    .name {
+        margin-top:5em;
+        top:5em;
+    }
+    #portfolio {
+        #carouselExampleIndicators {
+            width:80vw;
+        }
+    }
+    #contact {
+        form {
+            #map {
+                display:none;
+            }
+            .wrapper {
+                width:50vw;
+            }
+            input {
+                width:50vw;
+                margin:0;
+            }  
+        }
+    }
 }
 
-.sticky {
-    position:fixed;
-    top:0;
-    width:100vw;
-    height:8vh;
-    opacity: .7;
-    z-index:6;
+@media screen and (max-width: 400px) {
+    header {
+        .navbar {
+            display:flex;
+            justify-content: flex-end;
+            .fa-1x {
+                font-size: 1.5rem;
+            }
+            .navbar-toggler.toggler-example {
+                cursor: pointer;
+            }
+            .dark-blue-text {
+                color: white;
+            }
+            a:hover {
+                //border-bottom: .1em solid white;
+                color:white;
+                font-weight: 800;
+            }
+            .nav-item a {
+                color:white;
+                display:flex;
+                justify-content: flex-end;
+            }
+        }
+        .defaultnav {
+            display:none;
+        }
+        .name {
+            margin-right:0;
+            margin-left:1em;
+            margin-top: 13.5em;
+            font-size: .8em;
+            position:absolute;
+            opacity:.8;
+            color:white;
+        }
+        .sticky {
+            position:fixed;
+            top:0;
+            opacity: .9;
+            z-index:6;
+        }
+        .sticky-name {
+            margin:0;
+            position:absolute;
+            top: 14em;//297.75px;
+            left:1em;
+        }
+    }
+    #portfolio {
+        h1 {
+            font-size:4em;
+            margin-top:1em;
+            opacity:1;  
+        }
+        #carouselExampleIndicators {
+            width:80vw;
+        }
+    }
+    #contact {
+        h1 {
+            color:lightcyan;
+            opacity:1;
+            font-size: 4em;  
+        }
+        form {
+            input {
+                width:70vw;
+                padding: 0;
+                margin:0;
+            } 
+            .wrapper {
+                width:70vw;
+                padding: 0;
+                margin:0;
+            }
+            .error-message {
+                margin: .3em 0 0 1.4em;
+                width:60vw;
+            }
+            textarea {
+                height:25vh;
+                width:70vw;
+            }
+        }
+    }
 }
-.sticky-name {
-    margin:0;
-    // padding: 8em 0 0 1em;
-    position:absolute;
-    top: 14em;//297.75px;
-    left:1em;
-}
+

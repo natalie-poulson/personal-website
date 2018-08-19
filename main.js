@@ -1,52 +1,92 @@
 console.log('hi');
 
+
+// Smooth Scroll
+if (window.matchMedia("(max-width: 400px)").matches) {
+  //Responsive 
+  $('.nav-link').click (function(){
+    var thisTarget = $(this).attr('href');
+    var targetOffSet = $(thisTarget).offset().top;
+  
+    $('html, body').animate({scrollTop:targetOffSet}, 600);
+  })
+} else  {
+  //Default
+  $('.defaultnav ul li a').click(function() {
+    var thisTarget = $(this).attr('href');
+    var targetOffSet = $(thisTarget).offset().top;
+  
+    $('html, body').animate({scrollTop:targetOffSet}, 600);
+  });
+};
+
 //Sticky Nav
-  var stickyNavTop = $('nav').offset().top;
+if (window.matchMedia("(max-width: 400px)").matches) {
+//Responsive 
+  var stickyNavTop = $('.navbar').offset().top;
 
   var stickyNav = function (){
     var scrollTop = $(window).scrollTop();
     if (scrollTop > stickyNavTop) {
-      $('nav').addClass('sticky');
+      $('.navbar').addClass('sticky');
       $('.name').addClass('sticky-name');
     } else {
-      $('nav').removeClass('sticky');
-      $('.name').addClass('sticky-name');
+      $('.navbar').removeClass('sticky');
+      $('.navbar').removeClass('sticky-name');
     }
   };
   $(window).scroll(function () {
     stickyNav();
   });
+  } else {
+    //Default 
+    var stickyNavTop = $('.defaultnav').offset().top;
 
-
-// Smooth Scroll
-$('nav ul li a').click(function() {
-  $('html, body').animate({scrollTop:$(this.hash).offset().top-1},700);
-  return false;
-});
+    var stickyNav = function (){
+      var scrollTop = $(window).scrollTop();
+      if (scrollTop > stickyNavTop) {
+        $('.defaultnav').addClass('sticky');
+        $('.name').addClass('sticky-name');
+      } else {
+        $('.defaultnav').removeClass('sticky');
+        $('.name').removeClass('sticky-name');
+      }
+    };
+    $(window).scroll(function () {
+      stickyNav();
+    });
+};
 
 //Error Messages on Form
 $('button').click(function (e){
     e.preventDefault();
 
-    if ($('input').val().length < 1 && $('textarea').val().length < 1) {
-      console.log('gotit')
-     // $('.error-message').show();
-    }
+    $('form input, form textarea').each(function() {
+      var $currentField = $(this);
+      var fieldType = $(this).attr('type');
+
+      if ($currentField.val() === '') {
+        $currentField.addClass('error');
+        $currentField.siblings('.error-message').fadeIn();
+        return;
+      }
+
+      if (fieldType === 'email'){
+        var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        var isValidEmailAddress = re.test($currentField.val());
+        if (!isValidEmailAddress) {
+          $currentField.addClass('error');
+          $currentField.siblings('error-message').fadeIn();
+          return;
+        }
+      }
+      $currentField.removeClass('error');
+      $currentField.siblings('.error-message').hide();
+    });
 });
 
 //quotes fade in and out//
-// var quoteArray = ["hi", "bye", "whatup"];
 
-// function rotateQuotes (quote) {
-//   for (var i = 0; i < quoteArray.length; i++) {
-//     console.log(quoteArray[i]);
-//     var words = document.getElementById('quotes');
-
-//     words.append(`${quoteArray[i]}`);
-//   }
-// };
-
-// rotateQuotes(quoteArray);
 
 
 
