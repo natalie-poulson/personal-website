@@ -56,6 +56,32 @@ if (window.matchMedia("(max-width: 400px)").matches) {
       stickyNav();
     });
 };
+//Fading In and Out Quotes
+// var quotes = ["hello", "hola", "goodbye"]
+// var counter = 0;
+
+// function rotateQuotes() {
+//   $('#quotes').fadeTo (10000, 0 , function () {
+//     $(this).text(quotes[counter]);
+//     counter = counter++ % quotes.length;
+//     $(this).fadeTo(10000, 1, rotateQuotes)
+//   }) 
+// }
+// rotateQuotes();
+
+var quotes = ['<p>hello</p>', '<p>hi</p>', '<p>bye</p>' ];
+var counter = 0;
+var elem = document.getElementById('quotes');
+
+
+function change () {
+$(elem).fadeTo(10000, 0, function () {
+  this.innerHTML = quotes[counter];
+  counter = ++counter % quotes.length;
+  $(this).fadeTo(10000, 1, change)
+})
+}
+change(quotes);
 
 //Error Messages on Form
 $('button').click(function (e){

@@ -132,21 +132,21 @@ header {
     width:100vw;
     height:100vh;
     display:flex;
-    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
-    justify-content: flex-start;
     h1 {
-        padding: .5em 0 0 0;
         font-size: 5em;
         text-transform: uppercase;
         text-align:center;
         font-weight:800;
         color:white;
-        opacity: .4;
+        opacity: .6;
+        margin-bottom:4em;
     }
     #carouselExampleIndicators {
         width:40vw;
-        margin: 2em 0 0 0;
+        margin-top:0;
+        margin-bottom: 5em;
     }    
 }
 // Testimonials Page
@@ -160,19 +160,22 @@ header {
     color:white;
     text-align:center;
     opacity: .7;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
+    display:grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows:1fr 1fr 1fr 1fr;
     h1 {
-        padding: .5em 0 0 0;
         font-size: 5em;
         text-transform: uppercase;
         font-weight:800;
+        grid-column:2;
+        grid-row: 2;
     }
     #quotes {
-        color:black;
-        font-size: 3em;
+        color:white;
+        font-size: 4em;
+        grid-column:2;
+        grid-row:3;
+        opacity:1;
     }
 }
 // Contact Page
@@ -301,8 +304,16 @@ footer {
         top:5em;
     }
     #portfolio {
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h1 {
+            margin:0 0 1em 0;
+        }
         #carouselExampleIndicators {
             width:80vw;
+            margin:0;
         }
     }
     #contact {
@@ -371,7 +382,16 @@ footer {
             left:1em;
         }
     }
+    #about {
+        h1 {
+            font-size: 2em;
+        }
+    }
     #portfolio {
+        display:flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
         h1 {
             font-size:4em;
             margin-top:1em;
@@ -379,6 +399,11 @@ footer {
         }
         #carouselExampleIndicators {
             width:80vw;
+        }
+    }
+    #testimonials {
+        h1 {
+            font-size:3em;
         }
     }
     #contact {
