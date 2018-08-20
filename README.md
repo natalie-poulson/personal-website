@@ -15,10 +15,11 @@ Your process/approach.
 Unsolved problems.
 
 
-     Testimonials page Javasript code
+     Testimonials page Javasript code 
      Some unfinished design questions
      Refine/Edit content and photos
      Add projecs to work page as I finish them
+     Add timer to carousel
      
 Your biggest wins and challenges.
 
