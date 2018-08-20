@@ -3,7 +3,7 @@ console.log('hi');
 
 // Smooth Scroll
 if (window.matchMedia("(max-width: 400px)").matches) {
-  //Responsive 
+//Responsive 
   $('.nav-link').click (function(){
     var thisTarget = $(this).attr('href');
     var targetOffSet = $(thisTarget).offset().top;
@@ -11,7 +11,7 @@ if (window.matchMedia("(max-width: 400px)").matches) {
     $('html, body').animate({scrollTop:targetOffSet}, 600);
   })
 } else  {
-  //Default
+//Default
   $('.defaultnav ul li a').click(function() {
     var thisTarget = $(this).attr('href');
     var targetOffSet = $(thisTarget).offset().top;
@@ -39,7 +39,7 @@ if (window.matchMedia("(max-width: 400px)").matches) {
     stickyNav();
   });
   } else {
-    //Default 
+//Default 
     var stickyNavTop = $('.defaultnav').offset().top;
 
     var stickyNav = function (){
@@ -56,32 +56,21 @@ if (window.matchMedia("(max-width: 400px)").matches) {
       stickyNav();
     });
 };
+
 //Fading In and Out Quotes
-// var quotes = ["hello", "hola", "goodbye"]
-// var counter = 0;
-
-// function rotateQuotes() {
-//   $('#quotes').fadeTo (10000, 0 , function () {
-//     $(this).text(quotes[counter]);
-//     counter = counter++ % quotes.length;
-//     $(this).fadeTo(10000, 1, rotateQuotes)
-//   }) 
-// }
-// rotateQuotes();
-
-var quotes = ['<p>hello</p>', '<p>hi</p>', '<p>bye</p>' ];
+var quotes = ['<p>Natalie\'s work ethic is contagious and lively, and she always inspires co-workers to do/understand/create MORE. I would ADORE to work with her again in any position, anywhere and anytime</p><p> - Jen Kurtzman, Supervisor, New Day Youth & Family Services Safe Home</p>', ' <p>Until my last day I remember looking forward to shifts with Natalie because I could comfortably expect that, no matter how large the scale of production nor how numerous the issues needing to be solved before shift’s end, that she would coordinate and negotiate with me seamlessly.</p><p>-Cora Leigh Moss, Firebrand Artisan Breads</p> ', '<p>I cannot overstate Natalie\'s qualities that I work to emulate: consideration, critical awareness, social intelligence, and practical perseverance.</p><p>-Cora Leigh Moss, Firebrand Artisan Breads' ];
 var counter = 0;
 var elem = document.getElementById('quotes');
 
-
 function change () {
-$(elem).fadeTo(10000, 0, function () {
+$(elem).fadeTo(5000, 0, function () {
   this.innerHTML = quotes[counter];
   counter = ++counter % quotes.length;
   $(this).fadeTo(10000, 1, change)
 })
 }
 change(quotes);
+
 
 //Error Messages on Form
 $('button').click(function (e){
@@ -110,10 +99,6 @@ $('button').click(function (e){
       $currentField.siblings('.error-message').hide();
     });
 });
-
-//quotes fade in and out//
-
-
 
 
 // Google Maps API
@@ -293,4 +278,3 @@ function initMap () {
 }
 
 initMap();
-// End Google Maps API

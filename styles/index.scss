@@ -88,40 +88,38 @@ header {
     display:flex;
     flex-direction: column;
     justify-content: center;
-    // img {
-    // width:20vw;
-    // height:auto;
-    // border-radius:50%;
-    // opacity:.8;
-    // }
-    p {
-    display:flex;
-    justify-content: center;
-    text-align:center;
-    color:white;
-    text-transform: lowercase;
-    font-size: 1em;
-    line-height:1.2em;
-    margin: 0 2em;
-    font-size:2em;
-    }
+    .self-summary {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom:4em;
+        img {
+            width:25vw;
+            height:100%;
+            margin:.5em;
+        }
+        p {
+        text-align:center;
+        color:white;
+        background-color:black;
+        opacity:.8;
+        text-transform: lowercase;
+        font-size: 2.5em;
+        line-height:1.2em;
+        width:50vw;
+        margin:.5em;
+        } 
+    } 
     h1 {
+        background-color:black;
         color:rgb(250, 212, 72);
         text-transform: uppercase;
         text-align:center;
         font-weight: 800;
-        font-size: 4em;
+        font-size: 4.3em;
         opacity: .8;
+        padding:0;
     }
-    // .container {
-    //     display:flex;
-    //     justify-content: center;
-    //     margin: 0 0 4em 0;
-    //     p{
-    //         text-decoration:line-through #C1A94F;
-    //         opacity: .7;
-    //     }
-    // }
 }
 // Portfolio Page
 #portfolio {
@@ -160,23 +158,23 @@ header {
     color:white;
     text-align:center;
     opacity: .7;
-    display:grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows:1fr 1fr 1fr 1fr;
     h1 {
         font-size: 5em;
         text-transform: uppercase;
         font-weight:800;
-        grid-column:2;
-        grid-row: 2;
+        padding: 1em 0;
     }
     #quotes {
         color:white;
-        font-size: 4em;
-        grid-column:2;
-        grid-row:3;
-        opacity:1;
-    }
+        font-weight:800;
+        font-size: 2.5em;
+        margin-left:4em;
+        margin-right:4em;
+        }
+        p {
+            line-height:1.1em;
+            margin-bottom:2em;
+        }
 }
 // Contact Page
 #contact {
@@ -299,9 +297,24 @@ footer {
 
 /// MEDIA QUERIES
 @media screen and (max-width:710px) {
-    .name {
-        margin-top:5em;
-        top:5em;
+    header {
+        .name {
+        color:orange;
+        opacity:1;
+        }
+    }
+    #about {
+        .self-summary{
+            p{
+                font-size:1.5em;
+            }
+            img{
+                width:45vw;
+            }
+        }
+        h1 {
+            font-size:2.8em;
+        }
     }
     #portfolio {
         display:flex;
@@ -316,7 +329,22 @@ footer {
             margin:0;
         }
     }
+    #testimonials {
+        h1 {
+            margin-top:.5em;
+            color:white;
+        }
+        #quotes {
+            font-size:1.5em;
+            margin: 0 1em;
+            color:white;
+        }
+    }
     #contact {
+        h1{
+            background-color:red;
+            opacity:.6;
+        }
         form {
             #map {
                 display:none;
@@ -383,6 +411,16 @@ footer {
         }
     }
     #about {
+        .self-summary {
+            display:flex;
+            flex-direction: column;
+            margin:2em 0 0 0;
+            p {
+                font-size:1.4em;
+                width:80vw;
+                margin-bottom:2em;
+            }
+        }   
         h1 {
             font-size: 2em;
         }
@@ -403,25 +441,31 @@ footer {
     }
     #testimonials {
         h1 {
-            font-size:3em;
+            padding-top:3.4em;
+            padding-bottom:.5em;
+            font-size:3em;  
+        }
+        p {
         }
     }
     #contact {
+        background-size: cover;
+        background-repeat: no-repeat;
         h1 {
             color:lightcyan;
-            opacity:1;
-            font-size: 4em;  
+            font-size: 3em;  
         }
         form {
+            .container {
+                display:flex;
+                align-items: center;
+                margin: 0 0 0 0;
+            }
             input {
                 width:70vw;
-                padding: 0;
-                margin:0;
             } 
             .wrapper {
                 width:70vw;
-                padding: 0;
-                margin:0;
             }
             .error-message {
                 margin: .3em 0 0 1.4em;
