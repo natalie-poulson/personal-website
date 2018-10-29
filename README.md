@@ -6,25 +6,21 @@ HTML, CSS, SASS, Javascript, jQuery, Google Maps API, Font Awesome, Bootsrap
     
 #### My process:
 
-Wireframed basic layout
-Wrote out DOM tree
-Coded HTML
-Coded CSS
-Coded Javascript
-Added Responsive Design
+* Wireframed basic layout
+* Wrote out DOM tree
+* Coded HTML
+* Coded CSS
+* Coded Javascript
+* Added Responsive Design
 
      
 #### Unsolved problems:
 
-Testimonials page Javasript code 
-
-Some unfinished design questions
-
-Refine/Edit content and photos
-
-Add projecs to work page as I finish them
-
-Add timer to carousel
+* Testimonials page Javasript code 
+* Some unfinished design questions
+* Refine/Edit content and photos
+* Add projecs to work page as I finish them
+* Add timer to carousel
      
 #### My biggest wins and challenges:
 Wins:
