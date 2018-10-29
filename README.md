@@ -1,3 +1,6 @@
+# Personal Website 
+An assignment for General Assembly SF's WDI
+
 ### Technologies used:
 HTML, CSS, SASS, Javascript, jQuery, Google Maps API, Font Awesome, Bootsrap
     
