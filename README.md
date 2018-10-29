@@ -7,15 +7,10 @@ HTML, CSS, SASS, Javascript, jQuery, Google Maps API, Font Awesome, Bootsrap
 #### My process:
 
 Wireframed basic layout
-
 Wrote out DOM tree
-
 Coded HTML
-
 Coded CSS
-
 Coded Javascript
-
 Added Responsive Design
 
      
