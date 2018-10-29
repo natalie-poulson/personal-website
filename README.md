@@ -4,7 +4,7 @@ An assignment for General Assembly SF's WDI
 ### Technologies used:
 HTML, CSS, SASS, Javascript, jQuery, Google Maps API, Font Awesome, Bootsrap
     
-#### My process:
+### My process:
 
 * Wireframed basic layout
 * Wrote out DOM tree
@@ -14,7 +14,7 @@ HTML, CSS, SASS, Javascript, jQuery, Google Maps API, Font Awesome, Bootsrap
 * Added Responsive Design
 
      
-#### Unsolved problems:
+### Unsolved problems:
 
 * Testimonials page Javasript code 
 * Some unfinished design questions
@@ -22,7 +22,7 @@ HTML, CSS, SASS, Javascript, jQuery, Google Maps API, Font Awesome, Bootsrap
 * Add projecs to work page as I finish them
 * Add timer to carousel
      
-#### My biggest wins and challenges:
+### My biggest wins and challenges:
 Wins:
  * Responsive Sticky Nav & Smooth Scroll
  * Contact Page
